@@ -1,0 +1,16 @@
+module DocsCN_AppdevModulesM3DesignPatterns where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m3-design-patterns_L80.mdx
+    -- import Intro.Asset

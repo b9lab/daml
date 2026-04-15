@@ -1,0 +1,35 @@
+module DocsCN_AppdevDeepDivesCompositionMultiParty where
+
+import DA.Optional
+
+-- appdev_deep-dives_composition-multi-party_L78.mdx
+template TradeRequest
+  with
+    buyer : Party
+    seller : Party
+    asset : Text
+    price : Decimal
+  where
+    signatory buyer
+    observer seller
+
+    choice ConfirmTrade : ContractId TradeSettlement
+      controller seller
+      do create TradeSettlement with
+           buyer
+           seller
+           asset
+           price
+
+template TradeSettlement
+  with
+    buyer : Party
+    seller : Party
+    asset : Text
+    price : Decimal
+  where
+    signatory buyer, seller
+
+    choice Settle : ()
+      controller seller
+      do pure ()

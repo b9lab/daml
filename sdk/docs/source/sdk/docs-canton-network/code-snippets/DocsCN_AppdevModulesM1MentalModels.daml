@@ -1,0 +1,19 @@
+module DocsCN_AppdevModulesM1MentalModels where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m1-mental-models_L84.mdx
+    -- choice DoThing : Result
+    --   controller owner  -- Declaration, not code
+    --   do
+    --     -- Only owner can reach here

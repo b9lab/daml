@@ -1,0 +1,16 @@
+module DocsCN_AppdevModulesM4BackendDev where
+
+import DA.Optional
+
+-- appdev_modules_m4-backend-dev_L261.mdx
+template LicenseComment
+  with
+    provider : Party
+    user : Party
+    licenseNum : Int
+    commenter : Party
+    body : Text
+    createdAt : Time
+  where
+    signatory commenter
+    observer provider, user

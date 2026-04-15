@@ -1,0 +1,21 @@
+module DocsCN_AppdevModulesM2MigrationChecklist where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m2-migration-checklist_L166.mdx
+    -- -- Daml: No modifier needed
+    -- choice AdminAction : ()
+    --   controller admin  -- Only admin can exercise
+    --   do
+    --     -- Protocol enforces this
+    --     pure ()

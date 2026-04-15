@@ -1,0 +1,27 @@
+module DocsCN_AppdevReferenceDamlLanguageReference where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_reference_daml-language-reference_L185.mdx
+    -- -- Code from: code-snippets/Snippets.daml
+    -- -- [Include actual code example here]
+
+    -- appdev_reference_daml-language-reference_L36.mdx
+    -- data Address = Address
+    --   { street : Text
+    --   , city   : Text
+    --   }
+    -- 
+    -- data Color = Red | Green | Blue
+    -- 
+    -- newtype Token = Token Int

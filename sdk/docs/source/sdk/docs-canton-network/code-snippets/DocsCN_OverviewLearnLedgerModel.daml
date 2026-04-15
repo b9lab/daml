@@ -1,0 +1,28 @@
+module DocsCN_OverviewLearnLedgerModel where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- overview_learn_ledger-model_L269.mdx
+    -- choice ClaimAfterDeadline : ()
+    --   controller beneficiary
+    --   do
+    --     assertDeadlineExceeded "claim-after-deadline" deadline
+    --     -- ... claim logic
+
+    -- overview_learn_ledger-model_L283.mdx
+    -- -- Atomic swap: both transfers happen or neither does
+    -- choice ExecuteSwap : ()
+    --   controller buyer
+    --   do
+    --     exercise assetId Transfer with newOwner = buyer
+    --     exercise paymentId Transfer with newOwner = seller

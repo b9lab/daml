@@ -1,0 +1,16 @@
+module DocsCN_AppdevTroubleshootingGuideDevelopmentIssues where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_troubleshooting-guide_development-issues_L21.mdx
+    -- asset <- fetch assetCid
