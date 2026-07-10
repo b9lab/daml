@@ -6,6 +6,7 @@ module PartyRoles where
 
 import Daml.Script
 
+-- ASSET_BEGIN
 template Asset
   with
     issuer : Party   -- Will be signatory
@@ -19,6 +20,7 @@ template Asset
       with newOwner : Party
       controller owner      -- Only owner can exercise this choice
       do create this with owner = newOwner
+-- ASSET_END
 
 test_party_roles = script do
   issuer <- allocateParty "Issuer"
