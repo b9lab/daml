@@ -1,0 +1,28 @@
+module DocsCN_AppdevModulesM2SmartContractParadigm where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m2-smart-contract-paradigm_L152.mdx
+    -- process : [Decimal] -> Update [Decimal]
+    -- process items = do
+    --   forA items \item -> do
+    --     assertMsg "Over threshold" (item <= threshold)
+    --     pure (item * 2.0)
+
+    -- appdev_modules_m2-smart-contract-paradigm_L86.mdx
+    -- -- Canton: Holdings are individual contracts
+    -- -- Alice's total balance = sum of all Token contracts where owner = Alice
+    -- 
+    -- -- Query: Find all my tokens
+    -- myTokens <- queryContractKey @Token myParty
+    -- totalBalance <- pure $ sum [amount | Token{amount} <- myTokens]

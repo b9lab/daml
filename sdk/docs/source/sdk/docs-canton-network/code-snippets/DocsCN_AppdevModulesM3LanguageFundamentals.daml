@@ -1,0 +1,31 @@
+module DocsCN_AppdevModulesM3LanguageFundamentals where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m3-language-fundamentals_L109.mdx
+    -- increment3 = (1 +)
+    -- double = (* 2)
+
+    -- appdev_modules_m3-language-fundamentals_L280.mdx
+    -- boolToInt2 b = if b
+    --   then 1
+    --   else 0
+
+    -- appdev_modules_m3-language-fundamentals_L52.mdx
+    -- add n m = n + m
+
+    -- appdev_modules_m3-language-fundamentals_L84.mdx
+    -- increment2 = add 1
+
+    -- appdev_modules_m3-language-fundamentals_L96.mdx
+    -- three = 1 `add` 2

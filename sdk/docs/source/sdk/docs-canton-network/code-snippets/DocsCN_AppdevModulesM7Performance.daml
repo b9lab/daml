@@ -1,0 +1,25 @@
+module DocsCN_AppdevModulesM7Performance where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_modules_m7-performance_L36.mdx
+    -- -- Avoid: creates N contracts in one transaction
+    -- choice ProcessBatch : [ContractId Item]
+    --   controller processor
+    --   do mapA (\item -> create Item with ...) items
+
+    -- appdev_modules_m7-performance_L45.mdx
+    -- -- Better: one contract representing the batch
+    -- choice ProcessBatch : ContractId BatchResult
+    --   controller processor
+    --   do create BatchResult with items = processedItems

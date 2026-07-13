@@ -1,0 +1,22 @@
+module DocsCN_AppdevDeepDivesPrivacyModel where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- appdev_deep-dives_privacy-model_L92.mdx
+    -- choice SettleTrade : ()
+    --   controller buyer
+    --   do
+    --     -- Fetching sellerAsset here divulges it to the buyer
+    --     asset <- fetch sellerAssetId
+    --     archive sellerAssetId
+    --     create Asset with owner = buyer, issuer = asset.issuer, value = asset.value

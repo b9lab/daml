@@ -1,0 +1,33 @@
+module DocsCN_SdksToolsCliToolsDamlScript where
+
+import Daml.Script
+import DA.Time
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- sdks-tools_cli-tools_daml-script_L102.mdx
+    -- -- Query all active contracts of a type visible to a party
+    -- contracts <- query @MyTemplate alice
+    -- 
+    -- -- Query a specific contract by ID
+    -- optContract <- queryContractId alice cid
+
+    -- sdks-tools_cli-tools_daml-script_L112.mdx
+    -- assert (length contracts == 3)
+    -- assertMsg "Owner should be Bob" (contract.owner == bob)
+
+    -- sdks-tools_cli-tools_daml-script_L121.mdx
+    -- -- Advance ledger time
+    -- passTime (days 30)
+    -- 
+    -- -- Set a specific time
+    -- setTime (time (date 2025 Jun 15) 0 0 0)

@@ -423,6 +423,18 @@ daml_test(
 ]
 
 daml_test(
+    name = "docs-canton-network-daml-test",
+    timeout = "long",
+    srcs = glob(["source/sdk/docs-canton-network/code-snippets/**/*.daml"]),
+    additional_compiler_flags = [
+        "-Wupgrade-interfaces",
+        "-Wupgrade-exceptions",
+    ],
+    deps = ["//daml-script/daml:daml-script.dar"],
+)
+
+
+daml_test(
     name = "quickstart-daml-test",
     srcs = glob(
         include = ["source/sdk/tutorials/quickstart/template-root/daml/**/*.daml"],
@@ -468,6 +480,8 @@ daml_test(
     )
     for version in [DEV_LF_VERSION]
 ]
+
+
 
 daml_test(
     name = "daml-intro-9-daml-test",

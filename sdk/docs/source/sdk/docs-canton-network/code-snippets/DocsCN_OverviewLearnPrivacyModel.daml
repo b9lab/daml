@@ -1,0 +1,22 @@
+module DocsCN_OverviewLearnPrivacyModel where
+
+import DA.Optional
+
+-- Wrapper for documentation code fragments
+template DocSnippetWrapper
+  with
+    owner : Party
+  where
+    signatory owner
+
+    -- Code fragments below are for documentation only
+    -- They are wrapped for compilation checking
+
+    -- overview_learn_privacy-model_L281.mdx
+    -- -- Transaction reveals more than intended
+    -- choice RevealingChoice : ()
+    --   controller buyer
+    --   do
+    --     -- Fetching this contract divulges it to all transaction stakeholders
+    --     sensitiveAsset <- fetch sensitiveAssetId
+    --     -- buyer now knows about sensitiveAsset, even if not originally an observer
